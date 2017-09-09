@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Covek.cpp
+Covek.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Covek.h
+utility
+-
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Covek.h
+iostream
+-
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Stedac.cpp
+Stedac.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Stedac.h
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Stedac.h
+Covek.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Covek.h
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/main.cpp
+iostream
+-
+Stedac.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Stedac.h
+

@@ -80,6 +80,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Covek.cpp">
+			<Option target="01"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Covek.h">
+			<Option target="01"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Stedac.cpp">
+			<Option target="01"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Stedac.h">
+			<Option target="01"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/main.cpp">
 			<Option target="01"/>
 		</Unit>

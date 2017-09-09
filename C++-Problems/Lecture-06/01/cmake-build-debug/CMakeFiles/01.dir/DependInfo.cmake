@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Covek.cpp" "/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/cmake-build-debug/CMakeFiles/01.dir/Covek.cpp.o"
+  "/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/Stedac.cpp" "/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/cmake-build-debug/CMakeFiles/01.dir/Stedac.cpp.o"
   "/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/main.cpp" "/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-06/01/cmake-build-debug/CMakeFiles/01.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

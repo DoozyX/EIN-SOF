@@ -3,5 +3,5 @@ project(01)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp Stedac.cpp Stedac.h Covek.cpp Covek.h)
 add_executable(01 ${SOURCE_FILES})

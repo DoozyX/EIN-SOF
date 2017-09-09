@@ -123,6 +123,60 @@ depend:
 	$(MAKE) -f CMakeFiles/01.dir/build.make CMakeFiles/01.dir/build
 .PHONY : 01/fast
 
+Covek.o: Covek.cpp.o
+
+.PHONY : Covek.o
+
+# target to build an object file
+Covek.cpp.o:
+	$(MAKE) -f CMakeFiles/01.dir/build.make CMakeFiles/01.dir/Covek.cpp.o
+.PHONY : Covek.cpp.o
+
+Covek.i: Covek.cpp.i
+
+.PHONY : Covek.i
+
+# target to preprocess a source file
+Covek.cpp.i:
+	$(MAKE) -f CMakeFiles/01.dir/build.make CMakeFiles/01.dir/Covek.cpp.i
+.PHONY : Covek.cpp.i
+
+Covek.s: Covek.cpp.s
+
+.PHONY : Covek.s
+
+# target to generate assembly for a file
+Covek.cpp.s:
+	$(MAKE) -f CMakeFiles/01.dir/build.make CMakeFiles/01.dir/Covek.cpp.s
+.PHONY : Covek.cpp.s
+
+Stedac.o: Stedac.cpp.o
+
+.PHONY : Stedac.o
+
+# target to build an object file
+Stedac.cpp.o:
+	$(MAKE) -f CMakeFiles/01.dir/build.make CMakeFiles/01.dir/Stedac.cpp.o
+.PHONY : Stedac.cpp.o
+
+Stedac.i: Stedac.cpp.i
+
+.PHONY : Stedac.i
+
+# target to preprocess a source file
+Stedac.cpp.i:
+	$(MAKE) -f CMakeFiles/01.dir/build.make CMakeFiles/01.dir/Stedac.cpp.i
+.PHONY : Stedac.cpp.i
+
+Stedac.s: Stedac.cpp.s
+
+.PHONY : Stedac.s
+
+# target to generate assembly for a file
+Stedac.cpp.s:
+	$(MAKE) -f CMakeFiles/01.dir/build.make CMakeFiles/01.dir/Stedac.cpp.s
+.PHONY : Stedac.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... 01"
+	@echo "... Covek.o"
+	@echo "... Covek.i"
+	@echo "... Covek.s"
+	@echo "... Stedac.o"
+	@echo "... Stedac.i"
+	@echo "... Stedac.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

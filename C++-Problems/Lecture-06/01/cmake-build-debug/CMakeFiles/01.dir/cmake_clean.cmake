@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/01.dir/main.cpp.o"
+  "CMakeFiles/01.dir/Stedac.cpp.o"
+  "CMakeFiles/01.dir/Covek.cpp.o"
   "01.pdb"
   "01.exe"
   "lib01.dll.a"
