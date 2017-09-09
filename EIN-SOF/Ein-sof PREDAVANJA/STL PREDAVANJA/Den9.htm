@@ -1,0 +1,2591 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Den9_files/filelist.xml">
+<title>Може да се врши и експлицитна специјализација на class template-и
+(gl1_05</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Biljana</o:Author>
+  <o:LastAuthor>Biljana</o:LastAuthor>
+  <o:Revision>3</o:Revision>
+  <o:TotalTime>13</o:TotalTime>
+  <o:Created>2005-08-18T11:23:00Z</o:Created>
+  <o:LastSaved>2005-08-18T11:38:00Z</o:LastSaved>
+  <o:Pages>8</o:Pages>
+  <o:Words>2433</o:Words>
+  <o:Characters>13873</o:Characters>
+  <o:Company>Q</o:Company>
+  <o:Lines>115</o:Lines>
+  <o:Paragraphs>27</o:Paragraphs>
+  <o:CharactersWithSpaces>17037</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:204;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"Courier New\, Courier";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:"Verdana\, Arial\, Helvetica";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	mso-font-kerning:0pt;
+	font-weight:bold;}
+h2
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Arial Unicode MS";
+	color:windowtext;
+	font-weight:bold;}
+h3
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Arial Unicode MS";
+	color:windowtext;
+	font-weight:bold;}
+h4
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	color:windowtext;
+	font-weight:bold;}
+h5
+	{mso-style-next:Normal;
+	margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-indent:26.95pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	font-weight:bold;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	mso-ansi-language:EN-US;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:6.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:27.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	mso-ansi-language:EN-US;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:-70.7pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-left-alt:solid windowtext .5pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 0cm 4.0pt;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	mso-ansi-language:EN-US;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:18.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Verdana\, Arial\, Helvetica";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:red;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Verdana\, Arial\, Helvetica";
+	mso-fareast-font-family:"Arial Unicode MS";
+	mso-bidi-font-family:"Arial Unicode MS";
+	color:black;}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:9.0pt;
+	font-family:"Courier New\, Courier";
+	mso-fareast-font-family:"Arial Unicode MS";
+	mso-bidi-font-family:"Arial Unicode MS";
+	color:black;}
+p.intro, li.intro, div.intro
+	{mso-style-name:intro;
+	margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	color:windowtext;}
+p.numbered, li.numbered, div.numbered
+	{mso-style-name:numbered;
+	margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";
+	color:windowtext;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:305090717;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-641944756 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1093356558;
+	mso-list-type:hybrid;
+	mso-list-template-ids:49975712 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:1263025171;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1468882994 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l2:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:1274635175;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1529613400 -2136452060 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:1399325311;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-159605658 -1528146848 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-tab-stop:20.85pt;
+	mso-level-number-position:left;
+	margin-left:5.65pt;
+	text-indent:-2.8pt;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:normal;}
+@list l4:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB link=red vlink=purple style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 style='text-align:justify'><span style='font-size:18.0pt;mso-bidi-font-size:
+12.0pt'>4 Справување со исклучоци <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='text-align:justify'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><i>Исклучок
+(</i><i><span lang=EN-US style='mso-ansi-language:EN-US'>exception)</span></i>
+означува проблем што настанал при извршување на програма. Терминот и<span
+lang=MK style='mso-ansi-language:MK'>склучок е одбран поради фактот што проблем
+при извршување е настан што се случува ретко. <i>Exception handling</i>
+претставува начин за справување со исклучоците, односно им овозможува на
+програмите да продолжат да се извршуваат иако се појавила грешка. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'>Кај традиционалното програмирање често има
+мешање на кодот за проверка на грешки со кодот за решавање на програмската
+задача, како во следниот псевдокод:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:26.95pt'><i><span
+lang=MK style='mso-ansi-language:MK'>Изврши задача<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:26.95pt'><i><span
+lang=MK style='mso-ansi-language:MK'>Ако претходната задача не се извршила
+коректно<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:26.95pt'><i><span
+lang=MK style='mso-ansi-language:MK'><span style='mso-tab-count:2'>               </span>Процесирај
+ја грешката<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:26.95pt'><i><span
+lang=MK style='mso-ansi-language:MK'>Изврши задача<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:26.95pt'><i><span
+lang=MK style='mso-ansi-language:MK'>Ако претходната задача не се извршила
+коректно<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:26.95pt'><i><span
+lang=MK style='mso-ansi-language:MK'><span style='mso-tab-count:2'>               </span>Процесирај
+ја грешката<o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'><span style='mso-tab-count:2'>               </span>.
+. .<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'>Ваквиот начин за справување со грешка ја
+прави програмата тешка за следење, менување и одржување, особено кај големи
+апликации. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Exception handling </span><span
+lang=MK style='mso-ansi-language:MK'>овозможува отстранување на кодот за
+справување со грешки од текот на програмата. Програмерот може да одбере кои
+грешки ќе ги земе предвид. Се зголемува отпорноста на грешки (</span><span
+lang=EN-US style='mso-ansi-language:EN-US'>fault tolerance) </span><span
+lang=MK style='mso-ansi-language:MK'>на програмата. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Exception handling е дизајниран за
+процесирање на синхрони грешки, како што се: надминување на граници на поле,
+надминување на капацитет на променлива, делење со нула, погрешни функциски
+параметри, недостаток на меморија итн. Асинхрони настани, како В/И операции,
+кликање на глушец и сл., што се случуваат паралелно со програмскиот тек, не се
+погодни за обработка со exception handling.<span style="mso-spacerun: yes"> 
+</span><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>Важно е стратегијата за справување
+со исклучоци да се определи однапред и да се вгради уште на самиот почеток, а
+не откако ќе се имплeментира апликацијата. </span><span lang=MK
+style='mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'>Овој механизам може да се употреби за
+справување со грешки при повикување на функции членки, конструктори и класи. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'>За разлика од класичната проверка на
+грешки, ако грешките не се случуваат често, </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>exception handling не внесува додатен трошок
+при извршување ако не настануваат грешки. Но, ако некоја грешка се појавува
+барем 30% од времето, таа треба да се обработи во самата програма. <o:p></o:p></span></p>
+
+<h5 style='text-indent:0cm'>Традиционални техники за справување со грешки<span
+lang=MK style='mso-ansi-language:MK'><o:p></o:p></span></h5>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Пишување на робусен код кој е
+отпорен на грешки е напорна работа. Обработување на сите грешки значително го
+зголемува кодот и го прави многу потешко читлив. Затоа најчесто грешките се
+игнорираат. Но, игнорирање на грешка може да предизвика непредвидливо
+однесување на програмата, дури и прекин на извршување, што е неприфатливо кај
+комерцијални продукти. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Во C, </span><span lang=MK
+style='mso-ansi-language:MK'>може да се применат следните техники: <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:35.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-17.85pt;
+mso-list:l2 level1 lfo5;tab-stops:list 36.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Информацијата
+за грешката се враќа на повикувачката функција или се поставува глобално
+знаменце. Сите стандардни функции го прават тоа, но таа информација ретко се
+користи. Исто така, продолжување на извршување на функција во која<span
+style="mso-spacerun: yes">  </span>настанал исклучок нема смисол.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;mso-margin-bottom-alt:auto;
+margin-left:35.7pt;text-align:justify;text-indent:-17.85pt;mso-list:l2 level1 lfo5;
+tab-stops:list 36.0pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
+EN-US'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Употреба
+на функции од стандардна библиотека за сигнализација (<b>signal</b> </span><span
+lang=MK style='mso-ansi-language:MK'>и </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>raise</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'>). Овој систем е сложен и малку користен, бара
+тесна поврзаност помеѓу точката каде настанала грешката и местото каде што се
+обработува.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;mso-margin-bottom-alt:auto;
+margin-left:35.7pt;text-align:justify;text-indent:-17.85pt;mso-list:l2 level1 lfo5;
+tab-stops:list 36.0pt'><![if !supportLists]><span lang=EN-US style='mso-ansi-language:
+EN-US'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Со
+функцијата <b>setjmp()</b> се зачувува позната “добра“ состојба на програмата,
+а потоа со</span><span lang=EN-US style='mso-ansi-language:MK'> </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>longjmp()</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> таа се обновува и се врши скок кај
+сегментот што ја обработува грешката. Овие функции не повикуваат деструктори,
+па ако скокот се изврши во опсег каде што треба да се уништи објект,
+однесувањето на програмата не може да се предвиди, бидејќи може да останат
+алоцирани објекти чија важност престанала. Практично е невозможно да се врати
+претходната состојба на програмата. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Заеднички
+проблем на овие шеми е големата поврзаност помеѓу повикувачката функција и
+справувачот со грешки.<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify'><b><span
+lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:Tahoma;
+mso-ansi-language:EN-US'>Exception handling - </span></b><b><span lang=MK
+style='font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:Tahoma;
+mso-ansi-language:MK'>с</span></b><b><span style='font-size:14.0pt;mso-bidi-font-size:
+12.0pt;font-family:Tahoma'>правување со грешки во </span></b><b><span
+lang=EN-US style='font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:Tahoma;
+mso-ansi-language:EN-US'>C++</span></b><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=MK style='mso-ansi-language:MK'>Во </span><span
+lang=EN-US style='mso-ansi-language:EN-US'>C++ е воведена нова техника за
+справување со грешки која се нарекува <i>exception handling.</i></span><span
+lang=MK style='mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     text-align:justify;mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'><span
+     lang=EN-US style='mso-ansi-language:EN-US'>Кодот кај exception handling не
+     се преплетува со останатиот код. Повикувачката функција е справувачот со
+     грешки се одвоени. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     text-align:justify;mso-list:l1 level1 lfo3;tab-stops:list 36.0pt'><span
+     lang=EN-US style='mso-ansi-language:EN-US'>Грешките не можат да се
+     игнорираат. Ако функција сака да испрати порака за грешка, таа фрла објект
+     кој ја претставува таа грешка. Тој е потоа фатен од справувачот со грешки
+     или прекинува програмата. <o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Exception handling дава начин на кој
+компонентите можат да известат за проблемот што настанал при извршување. Тој се
+употребува кај функции што откриваат грешка, но не може да се справат со неа.
+Тогаш функцијата <i>фрла исклучок (throws an exception).</i> </span><span
+lang=MK style='mso-ansi-language:MK'>Нема гаранција дека секогаш постои </span><i><span
+lang=EN-US style='mso-ansi-language:EN-US'>exception handler</span></i><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>кој го фаќа </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>(catch) </span><span lang=MK style='mso-ansi-language:
+MK'>исклучокот, но ако има, тој го презема справувањето со проблемот. Исклучок кој
+не е фатен резултира со прекин на извршувањето на програмата. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'>Кога се применува </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>exception handling </span><span lang=MK
+style='mso-ansi-language:MK'>во </span><span lang=EN-US style='mso-ansi-language:
+EN-US'>C++, </span><span lang=MK style='mso-ansi-language:MK'>деловите во кои
+може да настане исклучок се пишуваат во </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>try</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>блок. Барем еден </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>catch</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>блок мора да следи по него. Во секој </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>catch</span></b><span lang=MK
+style='mso-ansi-language:MK'> блок е специфицирано каков тип на исклучок тој
+процесира. </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>cactch</span></b><span
+lang=MK style='mso-ansi-language:MK'> блокот е всушност </span><span
+lang=EN-US style='mso-ansi-language:EN-US'>exception handler. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'>Кога во </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>try</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> блокот ќе настане грешка, тогаш неговото
+извршување се прекинува веднаш и извршувањето се пренесува на <b>catch</b> </span><span
+lang=MK style='mso-ansi-language:MK'>блокот. Сите променливи што немаат важност
+надвор од доменот на овој блок се уништуваат. Се извршува првиот </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>catch</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>блок чии параметри одговараат на грешката. Останатите </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>catch</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> блокови што го имаат истиот параметар се
+игнорираат. Кога ќе заврши <b>catch</b> </span><span lang=MK style='mso-ansi-language:
+MK'>блокот, сите променливи што немаат важност надвор од неговиот домен се
+уништуваат. Потоа, </span><span lang=EN-US style='mso-ansi-language:EN-US'>извршувањето
+</span><span lang=MK style='mso-ansi-language:MK'>се пренесува на првата
+наредба по </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>try-catch</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>секвенцата. Ако не дојде до исклучок, се
+игнорираат </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>catch</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>блоковите и по завршувањето на </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>try</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>блокот</span><span lang=EN-US style='mso-ansi-language:EN-US'> извршувањето
+</span><span lang=MK style='mso-ansi-language:MK'>се пренесува на првата
+наредба по</span><b><span lang=EN-US style='mso-ansi-language:EN-US'> try-catch</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>секвенцата.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=MK style='mso-ansi-language:MK'><span style="mso-spacerun:
+yes"> </span>Следниот е демнстрација на </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>exception handling. </span><span lang=MK
+style='mso-ansi-language:MK'>Тој користи </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>exception handling</span><span lang=MK
+style='mso-ansi-language:MK'> за справување со исклучоци кои настануваат при
+делење со нула.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-family:"Book Antiqua";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 1.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// Primer za exception-handling koj <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// proveruva dali se pojavuva delenje so 0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using std::cout;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using std::cin;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using std::endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'>#include
+&lt;exception&gt;</span><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using std::exception;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//funkcii koi detektiraat delenje so 0 treba da frlat <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// objekt DivideByZeroException <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>class
+DivideByZeroException : public exception {</span><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>//
+konstructorot ja opredeluva default error message<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style='background:yellow;mso-highlight:yellow'>DivideByZeroException::DivideByZeroException()<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:yellow;mso-highlight:yellow;mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">      </span>: exception( &quot;obid za delenje so
+nula&quot; ) {}</span><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<span style="mso-spacerun: yes">  </span>// end
+class DivideByZeroException<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// izvrsi delenje i frli DivideByZeroException objekt <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// ako nastane delenje so nula<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>double quotient( int numerator, int denominator )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>// frli
+DivideByZeroException <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>if (
+denominator == 0 )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span><span
+style='background:aqua;mso-highlight:aqua'>throw DivideByZeroException(); //
+prekin na funkcijata</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>return
+static_cast&lt; double &gt;( numerator ) / denominator;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<span style="mso-spacerun: yes">  </span>// kraj na
+funkcijata quotient<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>int
+number1;<span style="mso-spacerun: yes">    </span>// delenik<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>int
+number2;<span style="mso-spacerun: yes">    </span>// delitel<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>double
+result;<span style="mso-spacerun: yes">  </span>// kolicnik<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>cout
+&lt;&lt; &quot;Vnesi dva celi broja (end-of-file za kraj): &quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>while ( cin
+&gt;&gt; number1 &gt;&gt; number2 ) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>// try
+block sodrzi kod sto moze da frli isklucok<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span><span
+style='background:aqua;mso-highlight:aqua'>try {<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">         </span>result = quotient( number1, number2
+);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">         </span>cout &lt;&lt; &quot;Kolicnikot e:
+&quot; &lt;&lt; result &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">      </span>} // kraj na try</span><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>//
+exception handler za isklucok delenje so nula<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span><span
+style='background:aqua;mso-highlight:aqua'>catch ( DivideByZeroException
+&amp;divideByZeroException ) {<o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">         </span>cout &lt;&lt; &quot;Nastanal
+isklucok: &quot; &lt;&lt; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">            </span>divideByZeroException.what()
+&lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">      </span>} // kraj na catch</span><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>cout
+&lt;&lt; &quot;\nVnesi dva celi broja (end-of-file za kraj): &quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>}<span
+style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>cout
+&lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><span
+style="mso-spacerun: yes">  </span>return 0;<span style="mso-spacerun: yes"> 
+</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<span style="mso-spacerun: yes">  </span>// kraj na
+main<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Излезот е: <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Vnesi dva celi broja (end-of-file za kraj): 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Kolicnikot e: 0.5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Vnesi dva celi broja (end-of-file za kraj): 3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Kolicnikot e: 0.75<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Vnesi dva celi broja (end-of-file za kraj): 5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:yellow;mso-highlight:yellow;mso-ansi-language:EN-US'>Nastanal
+isklucok: obid za delenje so nula</span><span lang=EN-US style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Vnesi dva celi broja (end-of-file za kraj): 3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Kolicnikot e: 0.75<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Vnesi dva celi broja (end-of-file za kraj): ^D<o:p></o:p></span></p>
+
+</div>
+
+<p style='margin-left:18.0pt;text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>Класата <b>DivideByZeroException</b>
+наследува од класата <b>exception</b></span><span lang=MK style='font-size:
+12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'> </span><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;
+font-family:"Times New Roman";mso-ansi-language:MK'>која е дел од стандардната
+библиотека на </span><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'>C++. <o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>За фрлање на исклучок
+се користи клучниот збор <b>throw</b></span><span lang=EN-US style='font-size:
+12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'> по што следи операнд, кој во случајов е објект од класата </span><b><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'>DivideByZeroException</span></b><span lang=MK
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'>. Параметар на <b>throw</b></span><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'> може да биде објект од било кој тип, резултат од
+израз, а може да се фрли и исклучок без параметар. Како резултат на </span><b><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'>throw</span></b><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'>
+се создава </span><b><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>throw</span></b><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'> операнд со кој се иницијализира </span><b><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'>catch</span></b><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'>
+handler-</span><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;
+font-family:"Times New Roman";mso-ansi-language:MK'>от. <o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>Во примерот</span><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'> </span><b><span lang=MK style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>throw</span></b><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'> </span><span lang=MK style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>наредбата
+креира објект од класата <b>DivideByZeroException</b>. Неговиот конструктор со <b>exception(
+&quot;obid za delenje so nula&quot; )</b>му предава стринг на конструкторот од
+основната класа exception кој е всу</span><span lang=EN-US style='font-size:
+12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'>шност пораката за грешка за овој исклучок. Кога се фрла исклучокот
+quotient </span><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;
+font-family:"Times New Roman";mso-ansi-language:MK'>прекинува веднаш, </span><b><i><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+color:windowtext;mso-ansi-language:MK'>пред да биде извршено делењето</span></i></b><b><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+color:windowtext;mso-ansi-language:MK'>.</span></b><span lang=MK
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'> </span><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes"> </span>Со:<o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=EN-US style='font-size:10.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes">      </span>catch ( DivideByZeroException
+&amp;divideByZeroException )</span><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>се врши “фаќање“ на
+референца на <b>DivideByZeroException</b>. Со тоа се избегнува додатниот трошок
+за создавање на нов објект. <o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>Соодветната порака за
+грешка се печати со<o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:9.0pt;font-family:"Courier New";
+mso-fareast-font-family:"Arial Unicode MS";color:black;mso-ansi-language:EN-US'>co</span><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>ut &lt;&lt; &quot;Nastanal isklucok: &quot; &lt;&lt; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">           
+</span>divideByZeroException.what() &lt;&lt; endl;</span><span lang=MK
+style='mso-ansi-language:MK'><o:p></o:p></span></p>
+
+</div>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>која е функција
+членка на <b>exception</b></span><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'>.
+<o:p></o:p></span></p>
+
+<p style='text-align:justify'><b><span style='font-size:14.0pt;mso-bidi-font-size:
+9.0pt;font-family:Tahoma'>Повторно фрлање на исклучок</span></b><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'><span
+style="mso-spacerun: yes"> </span>Може да се случи </span><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'>exception handler </span><span lang=MK
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'>да не може да се справи со исклучок целосно. Во тој
+случај тој може задачата да ја префрли на друг </span><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'>exception handler</span><span lang=MK
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'>. Тоа се нарекува повторно фрлање на исклучок (</span><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'>rethrowing an exception) и се постига со наредбата: <o:p></o:p></span></p>
+
+<p style='text-align:justify'><b><span lang=MK style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>throw;</span></b><span
+lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=EN-US style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes"> </span></span><span lang=MK style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>Овој
+исклучок го детектира следниот <b>try</b></span><span lang=MK style='font-size:
+12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'> </span><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;
+font-family:"Times New Roman";mso-ansi-language:MK'>блок. Со исклучокот се
+справува </span><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'>следниот </span><b><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-ansi-language:MK'>catch</span></b><span lang=MK style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'>
+</span><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;
+font-family:"Times New Roman";mso-ansi-language:MK'>блок кој е на поглобално
+ниво. <o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'><span
+style="mso-spacerun: yes"> </span>Следниот пример содржи повторно фрлање на
+исклучок: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// Demonstrira exception rethrowing.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using std::cout;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using std::endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;exception&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using std::exception;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// throw, catch i rethrow <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>void
+throwException()</span><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style='background:aqua;mso-highlight:aqua'>try {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>cout
+&lt;&lt; &quot;<span style="mso-spacerun: yes">  </span>Funkcijata
+throwException frla isklucok\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span><span
+style='background:aqua;mso-highlight:aqua'>throw exception();</span><span
+style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style='background:aqua;mso-highlight:aqua'>catch ( exception
+&amp;caughtException ) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>cout
+&lt;&lt; &quot;<span style="mso-spacerun: yes">  </span>Isklucok obraboten vo
+funkcijata throwException&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">          
+</span>&lt;&lt; &quot;\n<span style="mso-spacerun: yes">  </span>Funkcijata
+throwException povtorno go frla isklucokot&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span><span
+style='background:aqua;mso-highlight:aqua'>throw;</span><span
+style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>cout
+&lt;&lt; &quot;Ova ne treba da se otpecati\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<span style="mso-spacerun: yes">  </span>// kraj na
+throwException<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style='background:aqua;mso-highlight:aqua'>try {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>cout
+&lt;&lt; &quot;\nmain povikuva funkcija throwException\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span><span
+style='background:aqua;mso-highlight:aqua'>throwException();</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>cout
+&lt;&lt; &quot;Ova ne treba da se otpecati\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style='background:aqua;mso-highlight:aqua'>catch ( exception
+&amp;caughtException ) {</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      </span>cout
+&lt;&lt; &quot;\n\nIsklucok obraboten vo main\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>} <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>cout
+&lt;&lt; &quot;Programata prodolzuva po catch vo main\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>return 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+</div>
+
+<pre style='text-align:justify'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre><pre
+style='text-align:justify'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'>Излезот е:<o:p></o:p></span></pre><pre style='text-align:justify'><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>main povikuva funkcija throwException<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>Funkcijata
+throwException frla isklucok<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>Isklucok
+obraboten vo funkcijata throwException<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>Funkcijata
+throwException povtorno go frla isklucokot<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Isklucok obraboten vo main<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Programata prodolzuva po catch vo main<o:p></o:p></span></p>
+
+</div>
+
+<pre style='text-align:justify'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><b><span style='font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:Tahoma'>Фаќање на исклучок од било кој тип<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Фаќање на
+исклучок од било кој тип<span style="mso-spacerun: yes">  </span>може да се
+реализира на следниот начин: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>catch(...) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>&nbsp; cout &lt;&lt; &quot;nastanalo frlanje na
+isklucok&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}</span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=MK style='mso-ansi-language:MK'>Ваков </span><b><span
+lang=MK style='mso-bidi-font-size:9.0pt;mso-fareast-font-family:"Arial Unicode MS";
+color:black;mso-ansi-language:MK'>catch</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> блок (се нарекува </span><b><span lang=MK
+style='mso-bidi-font-size:9.0pt;mso-fareast-font-family:"Arial Unicode MS";
+color:black;mso-ansi-language:MK'>catchall</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'>) треба да се постави после листата на сите </span><span
+lang=MK style='mso-ansi-language:MK'>останати </span><b><span lang=MK
+style='mso-bidi-font-size:9.0pt;mso-fareast-font-family:"Arial Unicode MS";
+color:black;mso-ansi-language:MK'>catch</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> блокови, за да не изврши нивно пресретнување.
+Обично се користи за ослободување на ресурси пред да го фрли повт</span><span
+lang=MK style='mso-ansi-language:MK'>ор</span><span lang=EN-US
+style='mso-ansi-language:EN-US'>но истиот исклучок.<span style="mso-spacerun:
+yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><b><span style='font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:Tahoma'>Нефатени исклучоци<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=MK style='mso-ansi-language:MK'>Се смета дека</span><span
+lang=EN-US style='mso-ansi-language:EN-US'> exception handling е подобро од
+враќање на код за грешка бидејќи исклучоците можат да се игнорираат. Ако ниеден
+</span><b><span lang=MK style='mso-bidi-font-size:9.0pt;mso-fareast-font-family:
+"Arial Unicode MS";color:black;mso-ansi-language:MK'>catch</span></b><span
+lang=MK style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>блок </span><span lang=EN-US style='mso-ansi-language:EN-US'>на по </span><b><span
+lang=MK style='mso-bidi-font-size:9.0pt;mso-fareast-font-family:"Arial Unicode MS";
+color:black;mso-ansi-language:MK'>try</span></b><span lang=MK style='mso-ansi-language:
+EN-US'> </span><span lang=MK style='mso-ansi-language:MK'>блокот</span><span
+lang=MK style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>не одговара на исклучокот, исклучокот се пренесува на погорно ниво, на блок
+што го заградува </span><b><span lang=MK style='mso-bidi-font-size:9.0pt;
+mso-fareast-font-family:"Arial Unicode MS";color:black;mso-ansi-language:MK'>try</span></b><span
+lang=MK style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>блокот. Процесот продолжува се додека не се најде </span><b><span lang=MK
+style='mso-bidi-font-size:9.0pt;mso-fareast-font-family:"Arial Unicode MS";
+color:black;mso-ansi-language:MK'>catch</span></b><span lang=MK
+style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>кој одговара на исклучокот. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=MK style='mso-ansi-language:MK'>Ако на ниедно
+ниво нема соодветен </span><b><span lang=MK style='mso-bidi-font-size:9.0pt;
+mso-fareast-font-family:"Arial Unicode MS";color:black;mso-ansi-language:MK'>catch</span></b><span
+lang=MK style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>блок, се повикува функцијата </span><b><span lang=MK style='mso-bidi-font-size:
+9.0pt;mso-fareast-font-family:"Arial Unicode MS";color:black;mso-ansi-language:
+MK'>terminate()</span></b><span lang=MK style='mso-ansi-language:MK'> која е
+дел од стандардната библиотека. </span><span lang=EN-US style='mso-ansi-language:
+EN-US'>По default, </span><b><span lang=MK style='mso-bidi-font-size:9.0pt;
+mso-fareast-font-family:"Arial Unicode MS";color:black;mso-ansi-language:MK'>terminate()</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> ја </span><span lang=MK
+style='mso-ansi-language:MK'>повикува функцијата </span><b><span lang=MK
+style='mso-bidi-font-size:9.0pt;mso-fareast-font-family:"Arial Unicode MS";
+color:black;mso-ansi-language:MK'>abort()</span></b><span lang=MK
+style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>која веднаш ја прекинува програмата. Не се извршува нормално завршување,
+што значи дека не се повикуваат деструктори за глобалните и статичките објекти.
+Оваа функција се повикува и ако глобален конструктор или деструктор фрли
+исклучок. Се повикува и ако деструктор, кој е повикан како резултат на празнење
+на функцискиот стек, фрли исклучок. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><b><span style='font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:Tahoma'>Функција </span></b><b><span lang=EN-US style='font-size:
+14.0pt;mso-bidi-font-size:12.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>set_terminate()<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=MK style='mso-ansi-language:MK'>Однесувањето </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>terminate(&nbsp;)</span></b><span
+lang=MK style='mso-ansi-language:MK'>на може да се промени со функцијата </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>set_terminate(&nbsp;)</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'>. Со неа, <b>terminate(&nbsp;) </b>може
+да се замени со корисничка функција. <b>set_terminate(&nbsp;)</b> враќа
+покажувач на <b>terminate(&nbsp;)</b> функцијата што се заменува. Функцијата
+што ја заменува <b>terminate(&nbsp;)</b> не смее да има аргументи и треба да е
+од тип a <b>void</b>. Не смее да фрла исклучок. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Следниот
+пример илустрира<span style="mso-spacerun: yes">  </span><b>set_terminate(&nbsp;)</b>.
+<o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// Upotreba na set_terminate(). Prikazuva i 'nefateni'
+isklucoci<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;exception&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'>void terminator() {</span><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>cout &lt;&lt;
+&quot;Nov terminate!&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>exit(0);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><span
+style='background:aqua;mso-highlight:aqua'>void (*old_terminate)() =
+set_terminate(terminator);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//Problematicna klasa <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class Mess {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>class Fruit
+{};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>void f() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;Mess::f()&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span><span
+style='background:yellow;mso-highlight:yellow'>throw Fruit();//frla isklucok</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>~Mess() { <span
+style='background:yellow;mso-highlight:yellow'>throw 'c';</span> }//i
+destruktorot frla isklucok<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>Mess b;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>b.f();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>} catch(...)
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;vo catch(...)&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>} //kraj na main&nbsp;<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'>Излез од програмата:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Mess::f()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>Nov terminate!<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'>Со:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>void (*old_terminate)() = set_terminate(terminator);<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>се креира
+покажувач на функција и го иницијализира на повратната вредност од <b>set_terminate(&nbsp;)</b>.
+Следниот код го има истиот ефект: <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Класата <b>Mess</b>
+е проблематична бидејќи фрла исклучок </span><span lang=MK style='mso-ansi-language:
+MK'>и </span><span lang=EN-US style='mso-ansi-language:EN-US'>во функцијата
+членка <b>f()</b> </span><span lang=MK style='mso-ansi-language:MK'>и во
+деструкторот. Фрлањето на исклучок во деструкторот предизвикува повик на </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>terminate(&nbsp;)</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'>. Иако <b>catch(...)</b> би требало
+да го фати секој исклучок, тоа не се случува поради следното: при празнењето на
+стекот </span><span lang=MK style='mso-ansi-language:MK'>на </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>try</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>блокот за да се опслужи првиот исклучок се повикува деструкторот на </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>Mess</span></b><span lang=MK
+style='mso-ansi-language:MK'> и заради тоа се повикува </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>terminate(&nbsp;). </span></b><i><span
+lang=EN-US style='mso-ansi-language:EN-US'>Во општ случај, деструктор што
+предизвикува исклучок e </span></i><i><span lang=MK style='mso-ansi-language:
+MK'>резултат на </span></i><i><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style="mso-spacerun: yes"> </span>лош дизајн. </span></i><i><span lang=MK
+style='mso-ansi-language:MK'><o:p></o:p></span></i></p>
+
+<p class=intro style='text-align:justify'><b><span style='font-size:14.0pt;
+mso-bidi-font-size:12.0pt;font-family:Tahoma;mso-fareast-font-family:"Times New Roman"'>Бришење
+на објектите при фрлање на исклучок<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Механизмот
+за исклучоци гарантира дека кога еден домен (блок) ќе заврши, тогаш<i> за сите
+објекти чии конструктори комплетно се извршиле ќе бидат повикани нивните
+деструктори</i>. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Следниот
+пример прикажува што се случува ако се фрли исклучок на средина на создавање на
+поле од објекти: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// Brisenje na objekti po exception.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class Trace {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>static int
+counter;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>int objid;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>Trace() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>objid =
+counter++;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;konstruiram Trace #&quot; &lt;&lt; objid &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span><span
+style='background:yellow;mso-highlight:yellow'>if(objid == 3) throw 3;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>~Trace() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;unistuvam Trace #&quot; &lt;&lt; objid &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int Trace::counter = 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>Trace n1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>// Frla
+isklucok:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>Trace
+array[5];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>Trace
+n2;<span style="mso-spacerun: yes">  </span>// nema da se izvrsi.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>} catch(int
+i) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style="mso-spacerun: yes"> </span>cout &lt;&lt; &quot;faten &quot; &lt;&lt; i
+&lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>} <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Излезот е:<o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>konstruiram Trace #0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>konstruiram Trace #1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>konstruiram Trace #2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>konstruiram Trace #3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>unistuvam Trace #2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>unistuvam Trace #1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>unistuvam Trace #0<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>faten 3<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Во класата
+<b>Trace</b> се бројат објектите преку <b>static</b> членот <b>counter</b>.
+Секој објект го добива својот број во <b>objid</b>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Во main се
+создава објект <b>n1</b> (<b>objid</b> 0), и се обидува да се создаде поле од 5
+<b>Trace</b> објекти. Бидејќи се фрла исклучок пред #3 да биде потполно
+креиран, <b>n2</b> никогаш не се создава целосно. Од излезот се гледа дека се
+повикуваат деструкторите само на #0, #1 и #2. Објектот <b>n2 </b>не се уништува
+бидејќи воопшто не се ни создава. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><b><span style='font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:Tahoma'>Управување со ресурси<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Кога се
+користат исклучоци, треба да се води сметка што настанува со алоцираните
+ресурси ако дојде до исклучок. Особено треба да се внимава при алоцирање на
+ресурси во конструктор, бидејќи ако се фрли исклучок пред да заврши
+конструктор, деструкторот за тој објект нема да биде повикан. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Ова
+најчесто се случува при алоцирање на ресурси кај покажувачи кај покажувачи
+(“naked pointers”). <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// Naked pointers.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;cstddef&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class Cat {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>Cat() { cout
+&lt;&lt; &quot;Cat()&quot; &lt;&lt; endl; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>~Cat() { cout
+&lt;&lt; &quot;~Cat()&quot; &lt;&lt; endl; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class Dog {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>void*
+operator new(size_t sz) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;alociram Dog&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span><span
+style='background:yellow;mso-highlight:yellow'>throw 47;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>void operator
+delete(void* p) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;dealociram Dog&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>delete p;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class UseResources {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>Cat* bp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>Dog* op;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> 
+</span>UseResources(int count = 1) {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;UseResources()&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>bp = new Cat[count];<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>op = new
+Dog;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> 
+</span>~UseResources() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;~UseResources()&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>delete []
+bp; // brisenje na poleto<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>delete op;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>try {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   
+</span>UseResources ur(3);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>} catch(int)
+{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;vo handler&quot; &lt;&lt; endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Излезот е:<o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext 1.0pt;padding:0cm 0cm 0cm 10.0pt'>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext 1.0pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 10.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>UseResources()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext 1.0pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 10.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Cat()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext 1.0pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 10.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Cat()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext 1.0pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 10.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Cat()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext 1.0pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 10.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>alociram Dog<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext 1.0pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 10.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>vo handler<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=EN-US style='mso-ansi-language:EN-US'>Во
+конструкторот на <b>UseResources</b> се создаваат три <b>Cat</b> објекти, но во
+<b>Dog::operator new(&nbsp;)</b>, се фрла исклучок (кој симулира out-of-memory
+грешка). Контролата се пренесува во catch </span><span lang=MK
+style='mso-ansi-language:MK'>без да биде повикан деструкторот на</span><span
+lang=MK style='mso-ansi-language:EN-US'> </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>UseResources</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> бидејќи неговиот конструктор не завршил
+комплетно.Тоа значи дека трите <b>Cat</b> објекти кои успешно биле креирани не
+се уништуваат никогаш. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><span
+style='font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:Tahoma'>Вежби:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+lang=MK style='mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;text-indent:-2.8pt;
+mso-list:l4 level1 lfo1;tab-stops:list 20.85pt 36.0pt'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=MK style='mso-ansi-language:
+MK'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Креирај
+</span><span lang=MK style='mso-ansi-language:MK'>два вектори со случаен број
+на елементи кој е во интервалот </span><span lang=EN-US style='mso-ansi-language:
+EN-US'>[1, 1000). </span><span lang=MK style='mso-ansi-language:MK'>Потоа
+ископирај го вториот вектор во првиот со </span><span lang=EN-US
+style='mso-ansi-language:EN-US'>copy. </span><span lang=MK style='mso-ansi-language:
+MK'>Претходно провери дали првиот вектор има големина поголема или еднаква на
+големината на првиот. Ако не е, да се изврши фрлање на исклучок пред да се
+изврши копирањето на векторот. Постапката да се повторува во циклус во кој е
+сместена </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>try-catch</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>секвенца. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><b><span style='font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:Tahoma'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>

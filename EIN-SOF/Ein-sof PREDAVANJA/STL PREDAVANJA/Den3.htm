@@ -1,0 +1,2660 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./Den3_files/filelist.xml">
+<title>Може да се врши и експлицитна специјализација на class template-и
+(gl1_05</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Biljana</o:Author>
+  <o:LastAuthor>Biljana</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>99</o:TotalTime>
+  <o:Created>2005-08-09T12:56:00Z</o:Created>
+  <o:LastSaved>2005-08-09T12:56:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>1643</o:Words>
+  <o:Characters>9368</o:Characters>
+  <o:Company>Q</o:Company>
+  <o:Lines>78</o:Lines>
+  <o:Paragraphs>18</o:Paragraphs>
+  <o:CharactersWithSpaces>11504</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:204;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"Verdana\, Arial\, Helvetica";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:"Courier New\, Courier";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;}
+h1
+	{mso-style-next:Normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:14.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	mso-font-kerning:0pt;
+	font-weight:bold;}
+h3
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Arial Unicode MS";
+	color:windowtext;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	mso-ansi-language:EN-US;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin-top:0cm;
+	margin-right:-70.7pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-left-alt:solid windowtext .5pt;
+	padding:0cm;
+	mso-padding-alt:0cm 0cm 0cm 4.0pt;
+	font-size:10.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	color:windowtext;
+	mso-ansi-language:EN-US;}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:18.0pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Verdana\, Arial\, Helvetica";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:black;}
+p
+	{margin-right:0cm;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Verdana\, Arial\, Helvetica";
+	mso-fareast-font-family:"Arial Unicode MS";
+	mso-bidi-font-family:"Arial Unicode MS";
+	color:black;}
+pre
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:9.0pt;
+	font-family:"Courier New\, Courier";
+	mso-fareast-font-family:"Arial Unicode MS";
+	mso-bidi-font-family:"Arial Unicode MS";
+	color:black;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1274635175;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1529613400 -2136452060 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:1399325311;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-159605658 -1528146848 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:20.85pt;
+	mso-level-number-position:left;
+	margin-left:5.65pt;
+	text-indent:-2.8pt;
+	mso-ansi-font-weight:bold;
+	mso-ansi-font-style:normal;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+</head>
+
+<body lang=EN-GB style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<h1 style='text-align:justify'><span style='font-size:18.0pt;mso-bidi-font-size:
+12.0pt'>4 Експлицитна специјализација <o:p></o:p></span></h1>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:Tahoma'>4.1 Експлицитна специјализација на function templates</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'>Понекогаш
+е пожелно да се изврши заобиколуање на кодот генериран со template. Тоа може да
+се постигне со преклопување со конвенционална функција, но постои механизам да се
+изврши преку експлицитна специјализација на template. Во следниот пример е
+прикажана специјализација со повеќе различни синтакси. <span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-family:"Book Antiqua";mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 1.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// <o:p></o:p></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 1.0pt'>
+
+<p class=MsoNormal style='margin-right:-43.7pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// Demonsstracija na eksplicitna specijalizacija kaj
+function template<o:p></o:p></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 1.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;string&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template&lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>size_t bytes(T&amp; t)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;(koristam primaren template)\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>return
+sizeof t;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>size_t
+bytes(char*&amp; s)</span><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout&lt;&lt;&quot;(koristam
+preklopuvanje char* funkcija)\n&quot;;<o:p></o:p></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 1.0pt'>
+
+<p class=MsoNormal style='margin-right:-70.7pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>return
+strlen(s)+1; // za string sakame da bide vratena negovata dolzina<o:p></o:p></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 1.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>size_t
+bytes&lt;&gt;(string&amp; s)</span><span lang=EN-US style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout&lt;&lt;&quot;(koristam
+eksplicitna string specijalizacija)\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>return
+sizeof s;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>size_t
+bytes&lt;float&gt;(float&amp; x)</span><span lang=EN-US style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout&lt;&lt;&quot;(koristam
+eksplicitna float specijalizacija)\n&quot;;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>return
+sizeof x;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>int i; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;broj na bajti vo i &quot;&lt;&lt;bytes(i)&lt;&lt;endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>char
+*s=&quot;Zdravo&quot;; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;broj na bajti vo s &quot;&lt;&lt;bytes(s)&lt;&lt;endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>string t; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;broj na bajti vo t &quot;&lt;&lt;bytes(t)&lt;&lt;endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>float x; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;broj na bajti vo x &quot;&lt;&lt;bytes(x)&lt;&lt;endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>double d; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;broj na bajti vo d &quot;&lt;&lt;bytes(d)&lt;&lt;endl;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 1.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}</span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Излезот е: <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>(koristam primaren template)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>broj na bajti vo i 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>(koristam preklopuvanje char* funkcija)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>broj na bajti vo s 7<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>(koristam eksplicitna string specijalizacija)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>broj na bajti vo t 16<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>(koristam eksplicitna float specijalizacija)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>broj na bajti vo x 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>(koristam primaren template)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>broj na bajti vo d 8<o:p></o:p></span></p>
+
+</div>
+
+<p style='margin-left:18.0pt'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p style='text-align:justify'><span lang=MK style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Times New Roman";mso-ansi-language:MK'>Следниот пример
+илустрира ситуација во која преклопување на кодот во function template –от е
+неопходно: </span><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt;
+font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//max vrakja maksimum od dva elementi od tip T, kade
+za <span style="mso-spacerun: yes"> </span>T e<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>// definiran operatorot &gt; <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>T max(T a, T b)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>return a
+&gt; b ? a : b ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<span style="mso-spacerun: yes">    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;max(10, 15) = &quot; &lt;&lt; max(10, 15) &lt;&lt; endl ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;max('k', 's') = &quot; &lt;&lt; max('k', 's') &lt;&lt; endl ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;max(10.1, 15.2) = &quot; &lt;&lt; max(10.1, 15.2) &lt;&lt; endl
+;<o:p></o:p></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoBodyText2><span lang=EN-US><span style="mso-spacerun: yes">   
+</span><span style='background:yellow;mso-highlight:yellow'>cout &lt;&lt;
+&quot;max(\&quot;Aladdin\&quot;, \&quot;Jasmine\&quot;) = &quot; &lt;&lt;
+max(&quot;Aladdin&quot;, &quot;Jasmine&quot;) &lt;&lt; endl;//vrsi sporeduvanje
+na adresi</span></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>return 0 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+</div>
+
+<pre><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Излезот е:<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max(10, 15) = 15<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max('k', 's') = s<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max(10.1, 15.2) = 15.2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max(&quot;Aladdin&quot;, &quot;Jasmine&quot;) =
+Aladdin<o:p></o:p></span></p>
+
+</div>
+
+<pre><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<p style='margin:0cm;margin-bottom:.0001pt;text-align:justify'><span lang=MK
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-bidi-font-family:"Arial Unicode MS";mso-ansi-language:MK'>Овој резултат не
+е точен. </span><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Повикот
+на max(&quot;Aladdin&quot;, &quot;Jasmine&quot;) предизвикува генерирање на код
+за max(char*, char*), која всушност не споредува стрингови, туку нивните
+адреси. Затоа, за да се кореира однесувањето на </span><span lang=EN-US
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-bidi-font-family:"Arial Unicode MS";mso-ansi-language:EN-US'>max </span><span
+lang=MK style='font-size:12.0pt;mso-bidi-font-size:9.0pt;font-family:"Times New Roman";
+mso-bidi-font-family:"Arial Unicode MS";mso-ansi-language:MK'>за одредени
+типови, може да се користат специјализации. </span><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>Претходниот пример може да се преработи на следниот
+начин: <o:p></o:p></span></p>
+
+<p style='margin:0cm;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;cstring&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//max vrakja maksimum od dva <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>T max(T a, T b)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>return a
+&gt; b ? a : b ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'>// Speciaјlizacija на
+max за char*<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'>template &lt;&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'>char* max(char* a,
+char* b)</span><span lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>return
+strcmp(a, b) &gt; 0 ? a : b ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;max(10, 15) = &quot; &lt;&lt; max(10, 15) &lt;&lt; endl ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;max('k', 's') = &quot; &lt;&lt; max('k', 's') &lt;&lt; endl ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>cout
+&lt;&lt; &quot;max(10.1, 15.2) = &quot; &lt;&lt; max(10.1, 15.2) &lt;&lt; endl
+;<o:p></o:p></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-right:-61.7pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span><span
+style='background:yellow;mso-highlight:yellow'>cout &lt;&lt;
+&quot;max(\&quot;Aladdin\&quot;, \&quot;Jasmine\&quot;) = &quot; &lt;&lt;
+max(&quot;Aladdin&quot;, &quot;Jasmine&quot;) &lt;&lt; endl ; //Dava tocen
+rezultat</span><o:p></o:p></span></p>
+
+</div>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>return 0 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+</div>
+
+<pre><span style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'>Излезот е:<o:p></o:p></span></pre><pre><span
+style='font-size:12.0pt;mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max(10, 15) = 15<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max('k', 's') = s<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max(10.1, 15.2) = 15.2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>max(&quot;Aladdin&quot;, &quot;Jasmine&quot;) =
+Jasmine<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:14.0pt;
+mso-bidi-font-size:12.0pt;font-family:Tahoma'>4.2 Експлицитна специјализација
+на class templates</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Може да се врши и експлицитна
+специјализација на class template-</span><span lang=MK style='mso-ansi-language:
+MK'>и. Следната програма го илустрира тоа: <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=MK style='mso-ansi-language:
+MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=MK style='mso-ansi-language:
+MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>// <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>//Demonsstracija na eksplicitna specijalizacija kaj class
+template<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>using namespace std;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:MK'>template&lt;typename
+T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:MK'>class A</span><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><span style='mso-tab-count:1'>      </span>A(){cout
+&lt;&lt; &quot;Primaren template\n&quot;;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template &lt;&gt;</span><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>class A&lt;char&gt;</span><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><span style='mso-tab-count:1'>      </span>A(){cout
+&lt;&lt; &quot;char specijalizacija\n&quot;;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template &lt;&gt;</span><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>class A&lt;float&gt;</span><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><span style='mso-tab-count:1'>      </span>A(){cout
+&lt;&lt; &quot;float specijalizacija\n&quot;;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><span style='mso-tab-count:1'>      </span>A&lt;int&gt;
+a1;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><span style='mso-tab-count:1'>      </span>A&lt;char&gt;
+a2;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><span style='mso-tab-count:1'>      </span>A&lt;float&gt;
+a3;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><span style='mso-tab-count:1'>      </span>A&lt;double&gt;
+a4;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=MK style='mso-ansi-language:
+MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='mso-ansi-language:EN-US'>Излезот е: <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=MK style='mso-ansi-language:
+MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>Primaren template<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>char specijalizacija<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>float specijalizacija<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>Primaren template<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Class template-ите можат да бидат и
+парцијално специјализирани, т.е. некои од типовите во листата формални типови
+можат да се специфицираат, а некои да се остават празни. При специјализација се
+избира оној </span><span lang=EN-US style='font-family:"Book Antiqua";
+mso-ansi-language:EN-US'>template </span><span lang=EN-US style='mso-ansi-language:
+EN-US'>чија листа на аргументи најмногу се поклопува со онаа во
+специјализацијата, слично како кај преклопување на функции. Следниот пример
+илустрира разни случаи на парцијална специјализација кај class </span><span
+lang=EN-US style='font-family:"Book Antiqua";mso-ansi-language:EN-US'>template </span><span
+lang=EN-US style='mso-ansi-language:EN-US'>:<o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>// Vrsi parcijalna specijalizacija<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>using namespace std;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:MK'>template&lt;class T,
+class U&gt; class C {</span><span lang=MK style='font-size:10.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Courier New";mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; void f() { cout &lt;&lt; &quot;Primaren
+template\n&quot;; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template&lt;class
+U&gt; class C&lt;int, U&gt; {</span><span lang=MK style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; void f() { cout &lt;&lt; &quot;T == int\n&quot;; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template&lt;class
+T&gt; class C&lt;T, double&gt; {</span><span lang=MK style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; void f() { cout &lt;&lt; &quot;U == double\n”; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;</span><span lang=EN-US style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template</span><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>&lt;class T, class
+U&gt; class C&lt;T*, U&gt; {</span><span lang=EN-US style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; void f() { cout &lt;&lt; &quot;T*<span
+style="mso-spacerun: yes">  </span>\n”; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template&lt;class T,
+class U&gt; class C&lt;T, U*&gt; {</span><span lang=MK style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; void f() { cout &lt;&lt; &quot;U*<span
+style="mso-spacerun: yes">  </span>\n”; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template&lt;class T,
+class U&gt; class C&lt;T*, U*&gt; {</span><span lang=MK style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; void f() { cout &lt;&lt; &quot;T* i U*<span
+style="mso-spacerun: yes">  </span>\n”; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:MK'>template&lt;class
+T&gt; class C&lt;T, T&gt; {</span><span lang=MK style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; void f() { cout &lt;&lt; &quot;T == U\n”; }<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>};</span><span lang=EN-US style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>int main() {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; C&lt;float, int&gt;().f();&nbsp;&nbsp;&nbsp; // 1:
+Primaren template<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; C&lt;int, float&gt;().f();&nbsp;&nbsp;&nbsp; // 2:
+T == int<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; C&lt;float, double&gt;().f(); // 3: U == double<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; C&lt;float, float&gt;().f();&nbsp; // 4: T == U<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; C&lt;float*, float&gt;().f(); // 5: T* [T e float]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; C&lt;float, float*&gt;().f(); // 6: U* [U e float]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; C&lt;float*, int*&gt;().f();&nbsp; // 7: T* i U*
+[float,int]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>&nbsp; // Slednite specijalizacii se dvosmisleni. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>//&nbsp;&nbsp; 8: C&lt;int, int&gt;().f();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>//&nbsp;&nbsp; 9: C&lt;double, double&gt;().f();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>//&nbsp; 10: C&lt;float*, float*&gt;().f();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>//&nbsp; 11: C&lt;int, int*&gt;().f();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>//&nbsp; 12: C&lt;int*, int*&gt;().f();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=MK style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:MK'>} // kraj na main</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>&nbsp;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><span lang=MK style='mso-ansi-language:MK'>Параметрите
+можат да се специфицираат парцијално, во зависност дали се покажувачи или се
+еднакви. На пример, 8 е двосмислено бидејќи одговара и на </span><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class C&lt;int, U&gt;</span><span lang=EN-US
+style='mso-ansi-language:EN-US'> и на </span><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'>class C&lt;U, U&gt;</span><span lang=EN-US style='mso-ansi-language:
+EN-US'>. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify'><b><span lang=MK style='mso-ansi-language:MK'>Напомена:</span></b><span
+lang=MK style='mso-ansi-language:MK'> </span>Visual C++ 5.0 и Visual C++ 6.0 не
+поддржува парцијална специјализација на класи. Претходниот пример ќе ја
+предизвика следната грешка: compiler error C2989: template class has already
+been defined as a non-template class.<span lang=MK style='mso-ansi-language:
+MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;mso-margin-bottom-alt:auto;
+text-align:justify;text-indent:17.85pt'><span lang=EN-US style='mso-ansi-language:
+EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<h1>5 Статички членови и променливи</h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:18.0pt;text-align:justify'><span style='mso-bidi-font-size:9.0pt;
+font-family:"Verdana\, Arial\, Helvetica";color:black'>Секоја template класа
+или класа генерирана од template има своја копија на сите статички променливи
+или членки. Секоја инстанца на function template има своја копија на сите
+статички променливи дефинирани во рамки на функцијата. На пример, во: <o:p></o:p></span></p>
+
+<pre style='margin-left:18.0pt'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//Vklucuvanje na staticki clenovi<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class X<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;border:none;
+mso-border-left-alt:solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:aqua;mso-highlight:aqua;mso-ansi-language:EN-US'>static T s ;</span><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>} ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt;border:none;
+mso-border-left-alt:solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>X&lt;int&gt; xi ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span><span
+style="mso-spacerun: yes">  </span><span style='mso-tab-count:1'>  </span>X&lt;char*&gt;
+xc ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+</div>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:17.85pt;
+margin-bottom:.0001pt;text-align:justify'><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:17.85pt;
+margin-bottom:.0001pt;text-align:justify'><b><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'>X&lt;int&gt;</span></b><span style='font-size:12.0pt;
+mso-bidi-font-size:9.0pt'> има статичка компонента <b>s </b>од тип <b>int</b>,
+а <b>X&lt;char*&gt; </b>има статичка компонента <b>s</b> од тип <b>char*</b>. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:18.0pt'>Секоја инстанца (специјализација) на class template има
+своја копија од статичката ченка.<span lang=MK style='mso-bidi-font-size:9.0pt;
+color:black;mso-ansi-language:MK'>Следниот пример прикажува доделување на
+вредности на статички членови:<o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//Demonstracija na staticki clenovi<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class X<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">    </span>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span><span
+style='background:aqua;mso-highlight:aqua'>static T s ;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>} ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:yellow;mso-highlight:yellow;mso-ansi-language:EN-US'>template
+&lt;class T&gt; T X&lt;T&gt;::s = 0 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:yellow;mso-highlight:yellow;mso-ansi-language:EN-US'>template
+&lt;&gt; int X&lt;int&gt;::s = 3 ; //int specijalizacija<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:yellow;mso-highlight:yellow;mso-ansi-language:EN-US'>template
+&lt;&gt; char* X&lt;char*&gt;::s = &quot;Hello&quot; ;//char* specijalizacija</span><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>X&lt;int&gt;
+xi ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;xi.s = &quot; &lt;&lt; xi.s &lt;&lt; endl ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">      
+</span>X&lt;char*&gt; xc ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;xc.s = &quot; &lt;&lt; xc.s &lt;&lt; endl ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>return 0 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+</div>
+
+<h3 style='margin-left:18.0pt'><span style='font-size:12.0pt;mso-bidi-font-size:
+9.0pt;font-family:"Courier New\, Courier";color:black;font-weight:normal'>Излез
+од програмата:<i><o:p></o:p></i></span></h3>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>xi.s = 10<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>xc.s = Hello<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoBodyTextIndent2>Секоја инстанца (специјализација) на function
+template има своја копија од статичката ченка. На пример, </p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>//Vklucuvanje na staticki clenovi kaj function
+template<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>using namespace std ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>void f(T t)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span><span
+style='background:aqua;mso-highlight:aqua'>static T s ;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>s = t ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>cout
+&lt;&lt; &quot;s = &quot; &lt;&lt; s &lt;&lt; endl ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>} <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>int main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>f(10) ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>f(&quot;Hello&quot;)
+;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style='mso-tab-count:1'>      </span>return 0 ;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='margin:0cm;margin-bottom:.0001pt'><span lang=EN-US>ќе
+даде излез: </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>s = 10<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>s = Hello<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:6.0pt;mso-margin-bottom-alt:auto;
+text-align:justify;text-indent:17.85pt'>Тука <b>f&lt;int&gt;(int) </b>има
+статичка компонента <b>s</b> од тип <b>int</b>, а <b>f&lt;char*&gt;(char*)</b> има
+статичка компонента <b>s</b> од тип <b>char*</b>.<span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<h1 style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+lang=EN-US style='mso-ansi-language:EN-US'>6 Template-и и пријателски функции</span><span
+lang=EN-US style='font-family:"Book Antiqua";mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Пријателски односи можат да се
+воспостават помеѓу class template и глобална функција, функција членка на друга
+класа (која може да биде и специјализација на template) и класа (која исто така
+може да биде и специјализација на template).<span style="mso-spacerun: yes"> 
+</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=MK style='mso-ansi-language:MK'>Ако в</span><span lang=EN-US
+style='mso-ansi-language:EN-US'>о рамките на class template деклариран како: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt; class X<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoBodyText style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt'><span lang=EN-US>се декларира:</span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>friend void f1();</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify'><span
+lang=EN-US style='mso-ansi-language:EN-US'>функцијата <b>f1</b> </span><span
+lang=MK style='mso-ansi-language:MK'>станува пријателска за секоја
+специјализација инстанцирана од неа. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=MK style='mso-ansi-language:MK'>Декларацијата <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:17.85pt;margin-bottom:.0001pt;text-align:justify;border:none;
+mso-border-left-alt:solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>friend void f2( X&lt;T&gt; &amp;);</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify'><span lang=MK
+style='mso-ansi-language:MK'>за тип </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>T</span></b><span lang=EN-US style='mso-ansi-language:
+EN-US'>, ако <b>Т</b> е<span style="mso-spacerun: yes">  </span>float, ја прави
+функцијата <b>f2(X&lt;float&gt;&amp;)</b> пријателска само за специјализацијата
+<b>X&lt;float&gt;</b>. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=EN-US style='mso-ansi-language:EN-US'>Во рамки на class template може да
+се декларира функција членка на некоја класа да биде пријателска за сите негови
+специјализации. Се користи името на таа класа и операторот за припадност на
+класа <b>::</b>. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=MK style='mso-ansi-language:MK'>Ако в</span><span lang=EN-US
+style='mso-ansi-language:EN-US'>о рамките на class template деклариран како: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt; class X</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoBodyText style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt'><span lang=EN-US>се декларира:</span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>friend void А::f4();</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify'><span
+lang=EN-US style='mso-ansi-language:EN-US'>членката <b>f4</b> </span><span
+lang=MK style='mso-ansi-language:MK'>на класата </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>А</span></b><span lang=MK style='mso-ansi-language:
+MK'> станува пријателска за сите специјализации на template –от. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=MK style='mso-ansi-language:MK'>За</span><span lang=EN-US
+style='mso-ansi-language:EN-US'> class template деклариран како: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt; class X<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoBodyText style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt'><span lang=EN-US>декларацијата:</span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>friend void C&lt;T&gt;::f5(X&lt;T&gt;&amp;);<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify'><span lang=MK
+style='mso-ansi-language:MK'>за тип </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>T</span></b><span lang=EN-US style='mso-ansi-language:
+EN-US'>, ако <b>Т</b> е<span style="mso-spacerun: yes">  </span><b>float</b>,
+ја прави функцијата </span><span lang=MK style='mso-ansi-language:MK'>членка</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>C&lt;float&gt;::f5(X&lt;float&gt;&amp;)</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify'><span lang=MK
+style='mso-ansi-language:MK'>пријателска само за специјализацијата </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>X&lt;float&gt;</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=MK style='mso-ansi-language:MK'>За</span><span lang=EN-US
+style='mso-ansi-language:EN-US'> class template деклариран како: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt; class X</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoBodyText style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt'><span lang=EN-US>декларацијата:</span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>friend class Y;</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify'><span lang=MK
+style='mso-ansi-language:MK'>ги прави пријателски сите функции членки на </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>Y</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> </span><span lang=MK style='mso-ansi-language:
+MK'>за сите специјализации на </span><b><span lang=EN-US style='mso-ansi-language:
+EN-US'>X</span></b><span lang=EN-US style='mso-ansi-language:EN-US'>. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;text-align:justify;text-indent:17.85pt'><span
+lang=MK style='mso-ansi-language:MK'>За</span><span lang=EN-US
+style='mso-ansi-language:EN-US'> class template деклариран како: <o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt; class X</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoBodyText style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt'><span lang=EN-US>декларацијата:</span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.85pt;margin-bottom:.0001pt;border:none;mso-border-left-alt:solid windowtext .5pt;
+padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span lang=EN-US
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>friend class Z&lt;T&gt;;</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:12.0pt;text-align:justify'><span lang=MK
+style='mso-ansi-language:MK'>ги прави пријателски сите функции членки на специјализацијата
+</span><b><span lang=EN-US style='mso-ansi-language:EN-US'>Z&lt;T&gt;</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>за специјализацијата на </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>X&lt;T&gt;</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'>. </span><span lang=MK
+style='mso-ansi-language:MK'>На пример, сите членки на </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>Z&lt;float&gt;</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> се пријателски за <b>X&lt;float&gt;</b>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;iostream.h&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>#include &lt;conio.h&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class B;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class A {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span>T val;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style='background:lime;mso-highlight:lime'>friend void swap (A&lt;T&gt; &amp;,
+B&lt;T&gt; &amp;);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>A(){cout
+&lt;&lt;&quot;val=&quot;; cin &gt;&gt; val; cout &lt;&lt; endl;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>void disp()
+{cout &lt;&lt; &quot;val=&quot; &lt;&lt; val &lt;&lt; endl;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>template &lt;class T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>class B {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span>T x;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span><span
+style='background:lime;mso-highlight:lime'>friend void swap (A&lt;T&gt; &amp;,
+B&lt;T&gt; &amp;);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes"> </span>public:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>B(){cout
+&lt;&lt;&quot;x=&quot;; cin &gt;&gt; x; cout &lt;&lt; endl;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>void disp()
+{cout &lt;&lt; &quot;x=&quot; &lt;&lt; x<span style="mso-spacerun: yes"> 
+</span>&lt;&lt; endl;}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>};<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>template &lt;class
+T&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+background:lime;mso-highlight:lime;mso-ansi-language:EN-US'>void swap(
+A&lt;T&gt; &amp;p, B&lt;T&gt; &amp;q)</span><span lang=EN-US style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">   </span>T buf;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  
+</span>buf=p.val;p.val=q.x;q.x=buf;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>main()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>A&lt;int&gt;
+objA;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>B&lt;int&gt;
+objB;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span><span
+style='background:yellow;mso-highlight:yellow'>swap&lt;int&gt;(objA, objB);</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>objA.disp();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>objB.disp();<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><span style="mso-spacerun: yes">  </span>return 0;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'>Излез од програмата:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span lang=EN-US
+style='mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:none;border-left:solid windowtext .5pt;padding:0cm 0cm 0cm 4.0pt'>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>val=1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>x=2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>val=2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;border:none;mso-border-left-alt:
+solid windowtext .5pt;padding:0cm;mso-padding-alt:0cm 0cm 0cm 4.0pt'><span
+lang=EN-US style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New";
+mso-ansi-language:EN-US'>x=1</span><span lang=EN-US style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:14.0pt;
+mso-bidi-font-size:12.0pt;font-family:Tahoma'>Вежби:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=MK style='mso-ansi-language:
+MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt'><span lang=MK style='mso-ansi-language:
+MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;text-indent:-2.8pt;
+mso-list:l1 level1 lfo1;tab-stops:list 20.85pt 36.0pt'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=MK style='mso-ansi-language:
+MK'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><![endif]><span lang=MK style='mso-ansi-language:MK'>Напиши
+class template </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>Zapis&lt;T&gt;</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> кој </span><span lang=MK
+style='mso-ansi-language:MK'>содржи три приватни членки: <b>x</b>, <b>y</b> и <b>z</b>
+од тип Т</span><span lang=EN-US style='mso-ansi-language:EN-US'>. </span><span
+lang=MK style='mso-ansi-language:MK'>Креирај function template </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>kontrolor</span></b><span lang=MK
+style='mso-ansi-language:MK'> кој ќе проверува дали збирот на елементите<b> x,
+y</b> и <b>z</b> во </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>Zapis</span></b><span
+lang=MK style='mso-ansi-language:MK'> надминува 10000. Напиши соодветна
+програма за демонстрација со инстанцирање на објекти од тип </span><b><span
+lang=EN-US style='mso-ansi-language:EN-US'>Zapis&lt;int&gt;</span></b><span
+lang=MK style='mso-ansi-language:MK'> и </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>Zapis&lt;double&gt;</span></b><span lang=MK
+style='mso-ansi-language:MK'>.<span style="mso-spacerun: yes">  </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:5.65pt;margin-bottom:.0001pt;text-align:justify;text-indent:-2.8pt;
+mso-list:l1 level1 lfo1;tab-stops:list 20.85pt 36.0pt'><![if !supportLists]><b
+style='mso-bidi-font-weight:normal'><span lang=MK style='mso-ansi-language:
+MK'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></b><![endif]><span lang=MK style='mso-ansi-language:MK'>Креирај
+class template<b> </b></span><b><span lang=EN-US style='mso-ansi-language:EN-US'>Mnozestvo&lt;T&gt;</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>во со функции членки за додавање, прикажување на
+елементи на множеството и определување на најголем елемент во множеството. Како
+податочна структура за сместување на елементите на множеството може да се
+користи поле. Секој елемент може да се појави само еднаш. Секое множество
+содржи </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>static</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'> </span><span lang=MK
+style='mso-ansi-language:MK'>компонента во која е сместен бројот на елементи на
+множеството. Креирај три множества: </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>А</span></b><span lang=MK style='mso-ansi-language:
+MK'> од </span><b><span lang=EN-US style='mso-ansi-language:EN-US'>int</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'>,</span><span lang=EN-US
+style='mso-ansi-language:MK'> </span><b><span lang=EN-US style='mso-ansi-language:
+EN-US'>B</span></b><span lang=EN-US style='mso-ansi-language:EN-US'> </span><span
+lang=MK style='mso-ansi-language:MK'>од </span><b><span lang=EN-US
+style='mso-ansi-language:EN-US'>double</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'> и <b>C</b> </span><span lang=MK
+style='mso-ansi-language:MK'>од </span><b><span lang=EN-US style='mso-ansi-language:
+EN-US'>char*</span></b><span lang=EN-US style='mso-ansi-language:EN-US'>.
+Користи соодветна специјализација за коректно определување на најголем елемент
+во множеството од стрингови. Програмата треба да имплементира мени со следните
+опции:</span><span lang=MK style='mso-ansi-language:MK'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify'><span lang=MK
+style='mso-ansi-language:MK'><span style="mso-spacerun: yes"> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Додај
+елемент во А<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Додај
+елемент во B<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Додај елемент
+во C<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Прикажи го А<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Прикажи го B<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Прикажи го C<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Прикажи
+најголеми елементи<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]><span
+lang=MK style='mso-ansi-language:MK'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span lang=MK style='mso-ansi-language:MK'>Прикажи број
+на елементи во множествата<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo2;tab-stops:list 54.0pt 81.0pt'><![if !supportLists]>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><![endif]><span
+lang=MK style='mso-ansi-language:MK'>Крај</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=MK style='mso-ansi-language:
+MK'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

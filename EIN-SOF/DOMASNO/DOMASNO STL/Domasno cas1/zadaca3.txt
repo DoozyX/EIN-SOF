@@ -1,0 +1,1 @@
+Ne kompajlira, bidejki vo definicijata na template go ocekuva prvin P da bide iskoristen.
