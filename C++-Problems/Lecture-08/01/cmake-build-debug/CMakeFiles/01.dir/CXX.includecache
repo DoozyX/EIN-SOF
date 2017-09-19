@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-08/01/Complex.cpp
+iomanip
+-
+Complex.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-08/01/Complex.h
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-08/01/Complex.h
+iostream
+-
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-08/01/main.cpp
+iostream
+-
+Complex.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-08/01/Complex.h
+

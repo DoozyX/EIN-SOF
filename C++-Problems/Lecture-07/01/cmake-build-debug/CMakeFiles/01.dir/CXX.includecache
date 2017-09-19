@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-07/01/Dropki.cpp
+Dropki.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-07/01/Dropki.h
+iostream
+-
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-07/01/Dropki.h
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-07/01/main.cpp
+iostream
+-
+Dropki.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Lecture-07/01/Dropki.h
+

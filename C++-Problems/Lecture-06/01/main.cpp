@@ -27,9 +27,9 @@ int main() {
     cout << "\nEmployee 2:\n";
     stedac2Ptr->print();
 
-    delete stedac1Ptr;   // vrati memorija
+    delete stedac1Ptr;
     stedac1Ptr = nullptr;
-    delete stedac2Ptr;   // vrati memorija
+    delete stedac2Ptr;
     stedac2Ptr = nullptr;
 
     cout << "Broj na stedaci po brishenje e "

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Projects/01/Matrica.cpp
+Matrica.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Projects/01/Matrica.h
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Projects/01/Matrica.h
+iostream
+-
+
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Projects/01/main.cpp
+Matrica.h
+/cygdrive/c/Users/slobo/CLionProjects/EIN-SOF/C++-Problems/Projects/01/Matrica.h
+
