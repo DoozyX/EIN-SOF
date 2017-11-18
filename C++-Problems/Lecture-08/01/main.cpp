@@ -19,10 +19,10 @@ using std::endl;
 
 int main() {
     Complex x, y, z;
-    cout << "Enter x and y in form (x,y): ";
+    cout << "Enter x and y in form (x, y): ";
     cin >> y;
     cin.get();
-    cout << "Enter x and y in form (x,y): ";
+    cout << "Enter x and y in form (x, y): ";
     cin >> z;
     cout << endl;
 

@@ -11,9 +11,11 @@ private:
     int row;
     int column;
 public:
-    explicit Matrica(double num);
 
     explicit Matrica(int row = 2, int column = 2);
+
+    explicit Matrica(double num);
+
 
     Matrica(const Matrica &m);
 

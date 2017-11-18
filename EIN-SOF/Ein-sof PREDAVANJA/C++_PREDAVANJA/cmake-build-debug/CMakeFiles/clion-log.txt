@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Users\slobo\CLionProjects\EIN-SOF\EIN-SOF\Ein-sof PREDAVANJA\C++_PREDAVANJA

@@ -1,7 +1,6 @@
 #include "Matrica.h"
 
 Matrica::Matrica(int row, int column) : row(row), column(column) {
-    cout << "test1\n";
     matrix = new int *[row];
     for (int i = 0; i < row; ++i) {
         matrix[i] = new int[column];
@@ -9,7 +8,6 @@ Matrica::Matrica(int row, int column) : row(row), column(column) {
 }
 
 Matrica::Matrica(double num) : row(static_cast<int>(num)), column(static_cast<int>(num)) {
-    cout << "test2\n";
     auto n = (int) num;
     matrix = new int *[n];
     for (int i = 0; i < n; ++i) {
@@ -70,6 +68,7 @@ ostream &operator<<(ostream &output, const Matrica &matrica) {
         }
         cout << endl;
     }
+    return output;
 }
 
 istream &operator>>(istream &input, Matrica &m) {
@@ -79,6 +78,7 @@ istream &operator>>(istream &input, Matrica &m) {
             input >> m.matrix[i][j];
         }
     }
+    return input;
 }
 
 Matrica::Proxy Matrica::operator[](int index) {
@@ -90,9 +90,7 @@ Matrica::Proxy Matrica::operator[](int index) {
 }
 
 Matrica Matrica::operator+(Matrica &m) {
-    cout << "test";
     Matrica tmp(*this);
-    cout << tmp << endl;
 
     if (row != m.row || column != m.column) {
         cout << "Matrix not compatible.\n";

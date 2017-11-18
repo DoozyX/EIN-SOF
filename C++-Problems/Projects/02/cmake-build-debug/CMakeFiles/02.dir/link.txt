@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/02.dir/main.cpp.o CMakeFiles/02.dir/Oblik.cpp.o CMakeFiles/02.dir/DvoDomenzionalni.cpp.o CMakeFiles/02.dir/TroDimenzionalni.cpp.o CMakeFiles/02.dir/Pravoagolnik.cpp.o CMakeFiles/02.dir/Kvadar.cpp.o  -o 02.exe -Wl,--out-implib,lib02.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
